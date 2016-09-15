@@ -1082,7 +1082,10 @@ textarea {
 
 a {
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
   a:hover, a:focus {
     color: #d9d9d9;
     text-decoration: none; }
@@ -1094,7 +1097,8 @@ figure {
   margin: 0; }
 
 img {
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 100%; }
 
 .img-responsive {
   display: block;
@@ -5815,6 +5819,8 @@ button.close {
           display: inline-block;
           height: 34px;
           line-height: 34px; }
+          #header .top-menu .container-special .login a:hover {
+            color: #a02327; }
       #header .top-menu .container-special .register {
         padding-left: 104px; }
         #header .top-menu .container-special .register a {
@@ -5823,6 +5829,8 @@ button.close {
           display: inline-block;
           height: 34px;
           line-height: 34px; }
+          #header .top-menu .container-special .register a:hover {
+            color: #a02327; }
       #header .top-menu .container-special .phone {
         padding-left: 30px; }
         #header .top-menu .container-special .phone i {
@@ -5857,8 +5865,13 @@ button.close {
           display: inline-block;
           height: 47px;
           width: 212px;
-          line-height: 47px;
-          text-align: center; }
+          line-height: 45px;
+          text-align: center;
+          border: 2px solid transparent; }
+          #header .carousel-banner .item .carousel-caption .container-carousel a:hover {
+            border: 2px solid #a02327;
+            color: #a02327;
+            background: transparent; }
   #header .carousel-banner .item.one {
     background: url("../img/banner-1-min.png") no-repeat;
     background-size: cover;
@@ -5912,6 +5925,8 @@ button.close {
               display: inline-block; }
         #header .navigation .main-navbar .list-category a {
           color: #fff; }
+          #header .navigation .main-navbar .list-category a:hover {
+            color: #a02327; }
         #header .navigation .main-navbar .list-category .dropdown-content {
           width: 100%;
           margin: 0;
@@ -5997,6 +6012,8 @@ button.close {
           font-weight: 300; }
         #main .module-1 .category a:hover {
           opacity: 0.8; }
+          #main .module-1 .category a:hover h5 {
+            color: #a02327; }
       #main .module-1 .category.second {
         margin-bottom: 22px; }
       #main .module-1 .category img {
@@ -6009,13 +6026,16 @@ button.close {
       opacity: 0.8; }
     #main .module-2 .block-content img {
       width: 100%;
-      max-height: 204px; }
+      height: 150px; }
     #main .module-2 .block-content .caption a {
       color: #3b3b3b; }
+      #main .module-2 .block-content .caption a:hover {
+        color: #a02327; }
     #main .module-2 .block-content .caption h5 {
       font-size: 18px;
       font-weight: 500;
-      line-height: 22px; }
+      line-height: 22px;
+      min-height: 66px; }
     #main .module-2 .block-content .caption p {
       font-size: 15px;
       font-weight: 300; }
@@ -6048,6 +6068,8 @@ button.close {
       text-align: center;
       padding: 20px 0;
       line-height: 1; }
+      #main .module-2 .show-time a:hover {
+        opacity: 0.8; }
   #main .module-3 {
     position: relative; }
     #main .module-3 .description-module {
@@ -6110,10 +6132,10 @@ button.close {
         color: #c4191d;
         background: transparent; }
   #main .module-5 {
-    background: #fbb15a;
+    background: #ef383e;
     padding-bottom: 40px; }
     #main .module-5 h5 {
-      color: #010101;
+      color: #fff;
       font-size: 18px;
       font-weight: 300;
       text-align: center;
@@ -6156,18 +6178,29 @@ button.close {
     margin-top: 26px;
     margin-bottom: 15px; }
     #footer .top-footer .block-footer {
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      padding-left: 70px; }
       #footer .top-footer .block-footer .footer-link {
         margin: 0;
         padding: 0; }
         #footer .top-footer .block-footer .footer-link li {
           list-style: none; }
+          #footer .top-footer .block-footer .footer-link li a:hover {
+            color: #a02327; }
       #footer .top-footer .block-footer p {
         margin: 0; }
         #footer .top-footer .block-footer p i {
           padding-right: 8px; }
-      #footer .top-footer .block-footer:first-child {
-        padding-left: 0; }
+      #footer .top-footer .block-footer.contact {
+        padding-right: 0; }
+      #footer .top-footer .block-footer.social p {
+        margin-top: 5px; }
+        #footer .top-footer .block-footer.social p a {
+          font-size: 36px;
+          display: inline-block;
+          margin-right: 15px; }
+          #footer .top-footer .block-footer.social p a i {
+            padding: 0; }
   #footer .bot-footer p {
     text-align: center;
     margin-bottom: 20px; }
@@ -6233,6 +6266,9 @@ button.close {
   #main .module-2 .show-time a {
     font-size: 20px; }
 
+  #main .module-2 .block-content img {
+    height: 195px; }
+
   #main .module-3 {
     background: #ededed; }
     #main .module-3 .description-module .carousel-caption {
@@ -6252,7 +6288,11 @@ button.close {
   #main .module-5 {
     padding-bottom: 30px; }
     #main .module-5 h5 {
-      margin: 30px 25px; } }
+      margin: 30px 25px; }
+
+  #footer .top-footer .block-footer {
+    padding-left: 15px;
+    padding-right: 15px; } }
 @media screen and (max-width: 767px) {
   .carousel-control {
     height: 30px;
@@ -6268,20 +6308,25 @@ button.close {
   .carousel-control.right {
     right: 27%; }
 
-  #navbar-collapse {
-    margin-top: 10px; }
-    #navbar-collapse .navbar-nav {
-      margin: 0; }
+  #navbar-collapse .navbar-nav {
+    margin: 0;
+    padding: 15px 10px;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center; }
 
   .navbar-nav .open .dropdown-menu {
     position: absolute;
     top: 40px; }
 
   #header .navigation {
-    z-index: 999999; }
+    z-index: 999999;
+    padding: 0 15px; }
 
   #header .navigation .main-navbar {
     height: 40px; }
+
+  #header .top-menu .container-special {
+    padding: 25px 15px 0; }
 
   #header .top-menu .container-special .phone, #header .top-menu .container-special .register, #header .top-menu .container-special .login, #header .top-menu .container-special .email {
     padding: 0 0 0 10px; }
@@ -6334,6 +6379,13 @@ button.close {
 
   #header .navigation .main-navbar .list-category .dropdown-content {
     padding: 20px 0 20px; }
+
+  #main .module-1 .category a h5 {
+    font-size: 20px;
+    margin-top: -11px; }
+
+  #main .module-2 .block-content img {
+    height: auto; }
 
   #main .module-2 .show-time a {
     font-size: 16px; }

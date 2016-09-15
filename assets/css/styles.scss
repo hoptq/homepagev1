@@ -71,50 +71,56 @@
 	    background: -o-linear-gradient(rgba(0,0,0,0.6), transparent); /* For Opera 11.1 to 12.0 */
 	    background: -moz-linear-gradient(rgba(0,0,0,0.6), transparent); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(rgba(0,0,0,0.6), transparent); /* Standard syntax */
-		.container-special {
-			max-width: 1630px;
-			margin: 0 auto;
-			width: 100%;
-			padding: 0 55px;
-			padding-top: 25px;
-			color: #fff;
-			li {
-				height: 34px;
-				line-height: 34px;
-			}
-			.login {
-				padding: 0 0 0 30px;
-				a {
-					padding: 0;
-					color: #fff;
-					display: inline-block;
-					height: 34px;
-					line-height: 34px;
-				}
-			}
-			.register {
-				padding-left: 104px;
-				a {
-					padding: 0;
-					color: #fff;
-					display: inline-block;
-					height: 34px;
-					line-height: 34px;
-				}
-			}
-			.phone {
-				padding-left: 30px;
-				i {
-					padding-right: 5px;
-				}
-			}
-			.email {
-				i {
-					padding-right: 5px;
-				}
-			}
-			
-		}
+	    .container-special {
+	    	max-width: 1630px;
+	    	margin: 0 auto;
+	    	width: 100%;
+	    	padding: 0 55px;
+	    	padding-top: 25px;
+	    	color: #fff;
+	    	li {
+	    		height: 34px;
+	    		line-height: 34px;
+	    	}
+	    	.login {
+	    		padding: 0 0 0 30px;
+	    		a {
+	    			padding: 0;
+	    			color: #fff;
+	    			display: inline-block;
+	    			height: 34px;
+	    			line-height: 34px;
+	    			&:hover {
+	    				color: #a02327;
+	    			}
+	    		}
+	    	}
+	    	.register {
+	    		padding-left: 104px;
+	    		a {
+	    			padding: 0;
+	    			color: #fff;
+	    			display: inline-block;
+	    			height: 34px;
+	    			line-height: 34px;
+	    			&:hover {
+	    				color: #a02327;
+	    			}
+	    		}
+	    	}
+	    	.phone {
+	    		padding-left: 30px;
+	    		i {
+	    			padding-right: 5px;
+	    		}
+	    	}
+	    	.email {
+	    		i {
+	    			padding-right: 5px;
+	    		}
+	    	}
+
+	    }
 	}
 	.carousel-banner {
 		.item {
@@ -131,26 +137,32 @@
 					
 					padding: 0 75px 24px;
 					h3 {
-					font-size: 36px;
-					font-weight: 500;
-					margin-top: 55px;
-					margin-bottom: 25px;
-				}
-				p {
-					font-size: 18px;
-					font-weight: 300;
-					margin-bottom: 70px;
-				}
-				a {
-					font-size: 18.46px;
-					font-weight: 500;
-					background: #a02327;
-					display: inline-block;
-					height: 47px;
-					width: 212px;
-					line-height: 47px;
-					text-align: center;
-				}
+						font-size: 36px;
+						font-weight: 500;
+						margin-top: 55px;
+						margin-bottom: 25px;
+					}
+					p {
+						font-size: 18px;
+						font-weight: 300;
+						margin-bottom: 70px;
+					}
+					a {
+						font-size: 18.46px;
+						font-weight: 500;
+						background: #a02327;
+						display: inline-block;
+						height: 47px;
+						width: 212px;
+						line-height: 45px;
+						text-align: center;
+						border: 2px solid transparent;
+						&:hover {
+							border: 2px solid #a02327;
+							color: #a02327;
+							background: transparent;
+						}
+					}
 				}
 
 			}
@@ -190,35 +202,39 @@
 					&.open {
 						> a {
 							background: transparent;
-					    	opacity: 0.5;
+							opacity: 0.5;
 						}
 					}
 					> a {
 						padding: 0;
-					    height: 50px;
-					    line-height: 50px;
-					    @include transition (all 0.3s);
-					    
-					    span.icon-bar {
-					    	float: left;
-					    	width: 60px;
-					    	height: 50px;
-					    	text-align: center;
-					    	line-height: 50px;
-					    	display: inline-block;
-					    }
-					    span.icon-down {
+						height: 50px;
+						line-height: 50px;
+
+						@include transition (all 0.3s);
+
+						span.icon-bar {
+							float: left;
+							width: 60px;
+							height: 50px;
+							text-align: center;
+							line-height: 50px;
+							display: inline-block;
+						}
+						span.icon-down {
 							float: right;
 							width: 60px;
-					    	height: 50px;
-					    	text-align: center;
-					    	line-height: 50px;
-					    	display: inline-block;
+							height: 50px;
+							text-align: center;
+							line-height: 50px;
+							display: inline-block;
 						}
 					}
 				}
 				a {
 					color: #fff;
+					&:hover {
+						color: #a02327;
+					}
 				}
 				.dropdown-content {
 					width: 100%;
@@ -268,7 +284,7 @@
 				width: 72%;
 				border: none;
 				margin: 0;
-    			padding: 0;
+				padding: 0;
 				> div {
 					width: 92.6%;
 					float: left;
@@ -318,6 +334,9 @@
 				}
 				&:hover {
 					opacity: 0.8;
+					h5 {
+						color: #a02327;
+					}
 				}
 			}
 			&.second{
@@ -338,16 +357,20 @@
 			}
 			img {
 				width: 100%;
-				max-height: 204px;
+				height: 150px;
 			}
 			.caption {
 				a {
 					color: #3b3b3b;
+					&:hover {
+						color: #a02327;
+					}
 				}
 				h5 {
 					font-size: 18px;
 					font-weight: 500;
 					line-height: 22px;
+					min-height: 66px;
 				}
 				p {
 					font-size: 15px;
@@ -391,6 +414,9 @@
 				text-align: center;
 				padding: 20px 0;
 				line-height: 1;
+				&:hover {
+					opacity: 0.8;
+				}
 			}
 		}
 	}
@@ -473,10 +499,10 @@
 	/* END MODULE-4 CSS*/
 	/* MODULE-5 CSS */
 	.module-5 {
-		background: #fbb15a;
+		background: #ef383e;
 		padding-bottom: 40px;
 		h5 {
-			color: #010101;
+			color: #fff;
 			font-size: 18px;
 			font-weight: 300;
 			text-align: center;
@@ -526,11 +552,17 @@
 		margin-bottom: 15px;
 		.block-footer {
 			margin-bottom: 15px;
+			padding-left: 70px;
 			.footer-link {
 				margin: 0;
 				padding: 0;
 				li {
 					list-style: none;
+					a {
+						&:hover {
+							color: #a02327;
+						}
+					}
 				}
 			}
 			p {
@@ -539,8 +571,21 @@
 					padding-right: 8px;
 				}
 			}
-			&:first-child {
-				padding-left: 0;
+			&.contact {
+				padding-right: 0;
+			}
+			&.social {
+				p {
+					margin-top: 5px;
+					a {
+						font-size: 36px;
+						display: inline-block;
+						margin-right: 15px;
+						i {
+							padding: 0;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -623,6 +668,9 @@
 	#main .module-2 .show-time a {
 		font-size: 20px;
 	}
+	#main .module-2 .block-content img {
+		height: 195px;
+	}
 	#main {
 		.module-3 {
 			background: #ededed;
@@ -656,6 +704,10 @@
 			}
 		}
 	}
+	#footer .top-footer .block-footer {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 @media screen and (max-width: 767px) {
 	.carousel-control {
@@ -673,9 +725,11 @@
 		right: 27%;
 	}
 	#navbar-collapse {
-		margin-top: 10px;
 		.navbar-nav {
 			margin: 0;
+			padding: 15px 10px;
+			background: rgba(0,0,0,0.9);
+			text-align: center;
 		}
 	}
 	.navbar-nav .open .dropdown-menu {
@@ -684,9 +738,13 @@
 	}
 	#header .navigation {
 		z-index: 999999;
+		padding: 0 15px;
 	}
 	#header .navigation .main-navbar {
 		height: 40px;
+	}
+	#header .top-menu .container-special {
+		padding: 25px 15px 0;
 	}
 	#header .top-menu .container-special .phone, #header .top-menu .container-special .register,#header .top-menu .container-special .login,#header .top-menu .container-special .email {
 		padding: 0 0 0 10px;
@@ -740,6 +798,13 @@
 	#header .navigation .main-navbar .list-category .dropdown-content {
 		padding: 20px 0 20px;
 	}
+	#main .module-1 .category a h5 {
+		font-size: 20px ;
+		margin-top: -11px;
+	}
+	#main .module-2 .block-content img {
+		height: auto;
+	}
 	#main .module-2 .show-time a {
 		font-size: 16px;
 	}
@@ -757,7 +822,7 @@
 	}
 	#main .module-4 a {
 		font-size: 16px;
-    	width: 160px;
+		width: 160px;
 		height: 40px;
 		line-height: 40px;
 	}
