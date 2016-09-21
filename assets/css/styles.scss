@@ -232,9 +232,6 @@
 				}
 				a {
 					color: #fff;
-					&:hover {
-						color: #a02327;
-					}
 				}
 				.dropdown-content {
 					width: 100%;
@@ -252,6 +249,11 @@
 						font-size: 16px;
 						font-weight: 300;
 						margin-bottom: 16px;
+						a {
+							&:hover {
+								color: #a02327;
+							}
+						}
 					}
 					p.button-all {
 						margin-top: 34px;
@@ -265,6 +267,12 @@
 							text-align: center;
 							font-size: 18px;
 							font-weight: 500;
+							border: 2px solid transparent;
+							&:hover {
+								border: 2px solid #a02327;
+								color: #a02327;
+								background: transparent;
+							}
 						}
 					}
 					.topic {
@@ -424,9 +432,16 @@
 	/* MODULE-3 CSS */
 	.module-3 {
 		position: relative;
+		min-height: 570px;
+		.box {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
 		.description-module {
 			position: static;
 			padding: 0 115px 0 85px;
+			min-height: 570px;
 			.carousel-caption {
 				position: static;
 				text-align: left;
@@ -442,7 +457,7 @@
 					font-size: 14px;
 					font-weight: 300;
 					line-height: 20px;
-					margin-bottom: 130px;
+					
 				}
 			}
 		}
@@ -674,7 +689,12 @@
 	#main {
 		.module-3 {
 			background: #ededed;
+			min-height: auto;
+			.box {
+				position: static;
+			}
 			.description-module {
+				min-height: auto;
 				.carousel-caption {
 					text-align: center;
 					p {
