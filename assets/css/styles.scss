@@ -133,8 +133,7 @@
 				left: 0;
 				padding: 0;
 				.container-carousel {
-					background: rgba(0,0,0,0.8);
-					
+					background: rgba(0,0,0,0.6);
 					padding: 0 75px 24px;
 					h3 {
 						font-size: 36px;
@@ -236,20 +235,32 @@
 				.dropdown-content {
 					width: 100%;
 					margin: 0;
+					border: 0;
+					padding: 0;
 					background: rgba(0,0,0,0.8);
+					/* Fix 21/9/2016 */
+					.speical-row {
+						margin: 0;
+						.object {
+							background: rgba(0,0,0,0.5);
+						}
+					}
 					h5 {
 						font-size: 20px;
 						font-weight: 500;
 						color: #fff;
-						margin-left: 40px;
+						margin-left: 25px;
 						margin-bottom: 20px;
+						margin-top: 20px;
 					}
 					p {
-						margin-left: 70px;
+						margin-left: 55px;
 						font-size: 16px;
 						font-weight: 300;
-						margin-bottom: 16px;
+						margin-bottom: 25px;
 						a {
+							display: inline-block;
+							width: 100%;
 							&:hover {
 								color: #a02327;
 							}
@@ -262,7 +273,7 @@
 							display: inline-block;
 							width: 204px;
 							height: 45px;
-							line-height: 45px;
+							line-height: 41px;
 							background: #811518;
 							text-align: center;
 							font-size: 18px;
@@ -276,6 +287,7 @@
 						}
 					}
 					.topic {
+						padding-left: 90px;
 						.last-group {
 							p {
 								margin-left:40px;
@@ -368,30 +380,40 @@
 				height: 150px;
 			}
 			.caption {
+				.block-course {
+					min-height: 118px;
+				}
 				a {
 					color: #3b3b3b;
 					&:hover {
 						color: #a02327;
 					}
 				}
+				a.teacher-link {
+					font-size: 15px;
+				}
 				h5 {
 					font-size: 18px;
 					font-weight: 500;
 					line-height: 22px;
-					min-height: 66px;
 				}
 				p {
-					font-size: 15px;
 					font-weight: 300;
+					line-height: 1;
 					&.vote {
 						color: #a6a6a6;
-						margin-bottom: 12px;
+						margin-bottom: 10px;
+						font-size: 16px;	
 					}
 					.price {
 						float: left;
+						font-weight: 700;
+						font-size: 20px
 					}
 					.like {
 						float: right;
+						font-size: 20px;
+						line-height: 1;
 						@include transition (all 0.3s);
 						&:hover {
 							i {
@@ -450,8 +472,13 @@
 				h5 {
 					font-size: 24px;
 					font-weight: 300;
-					margin-bottom: 22px;
+					margin-bottom: 32px;
 					margin-top: 218px;
+				}
+				p.teacher-name {
+					font-size: 18px;
+					font-weight: 500;
+					margin-bottom: 15px;
 				}
 				p {
 					font-size: 14px;
@@ -627,6 +654,12 @@
 	.container-carousel {
 		width: 970px !important;
 	}
+	.object {
+		width: 28%;
+	}
+	.topic {
+		width: 72%;
+	}
 }
 @media screen and (min-width: 1600px) {
 	.container-carousel {
@@ -635,58 +668,121 @@
 }
 
 @media screen and (max-width: 1400px) {
-	#header .carousel-banner .item .carousel-caption .container-carousel h3 {
-		margin-top: 40px;
+	#header {
+		.carousel-banner {
+			.item .carousel-caption {
+				.container-carousel {
+					h3 {
+						margin-top: 40px;
+					}
+					p{
+						margin-bottom: 50px;
+					}
+				}
+			}
+		}
 	}
-	#header .carousel-banner .item .carousel-caption .container-carousel p {
-		margin-bottom: 50px;
+}
+@media screen and (min-width:768px) and (max-width: 991px) {
+	.speical-row {
+		position: relative;
+	}
+	.object {
+		position: static;
+		background:transparent !important;
+		&:before {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 50%;
+			background: rgba(0, 0, 0, 0.5);
+			content: "";
+			display: inline-block;
+			left: 0;
+			z-index: -1;
+		}
 	}
 }
 @media screen and (max-width: 991px) {
-	#header .top-menu .container-special .right-nav {
-		padding-left: 55px;
-	}
-	#header .navigation .main-navbar .list-category {
-		width: 11%;
-	}
-	#header .navigation .main-navbar .form-search {
-		width: 89%;
-	}
-	#header .navigation .main-navbar .form-search > div {
-		width: 86%;
-	}
-	#header .navigation .main-navbar .form-search button {
-		width: 14%;
-	}
-	#header .carousel-banner .item .carousel-caption .container-carousel h3 {
-		font-size: 28px;
-	}
-	#header .carousel-banner .item .carousel-caption .container-carousel p {
-		font-size: 16px;
-	}
-	#header .carousel-banner .item .carousel-caption .container-carousel a {
-		font-size: 16px;
-	}
-	#header .carousel-banner .item .carousel-caption .container-carousel p {
-		margin-bottom: 40px;
-	}
-	#header .carousel-banner .item .carousel-caption .container-carousel h3 {
-		margin-top: 35px;
-		margin-bottom: 20px;
-	}
-	#header .carousel-banner .item .carousel-caption .container-carousel {
-		padding: 0 40px 25px;
-	}
-	#main .module-1 .category {
-		margin-bottom: 22px;
-	}
-	#main .module-2 .show-time a {
-		font-size: 20px;
-	}
-	#main .module-2 .block-content img {
-		height: 195px;
+	
+	#header {
+		.top-menu {
+			.container-special {
+				.right-nav {
+					padding-left: 55px;
+				}
+			}
+		}
+		.navigation {
+			.main-navbar {
+				.list-category {
+					width: 11%;
+					.dropdown-content {
+						.topic {
+							padding-left: 15px;
+							padding-bottom: 10px;
+						}
+						p {
+							margin-left: 40px;
+						}
+						p.button-all {
+							a {
+								width: 170px;
+							}
+						}
+					}
+				}
+				.form-search {
+					width: 89%;
+					> div {
+						width: 86%;
+					}
+					button {
+						width: 14%;
+					}
+				}
+			}
+		}
+		.carousel-banner {
+			.item {
+				.carousel-caption {
+					.container-carousel {
+						padding: 0 40px 25px;
+						h3 {
+							font-size: 28px;
+							margin-top: 35px;
+							margin-bottom: 20px;
+						}
+						p {
+							font-size: 16px;
+							margin-bottom: 40px;
+						}
+						a {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
 	}
 	#main {
+		.module-1 {
+			.category {
+				margin-bottom: 22px;
+			}
+		}
+		.module-2 {
+			.show-time {
+				a {
+					font-size: 20px;
+				}
+			}
+			.block-content {
+				img {
+					height: 195px;
+				}
+			}
+		}
 		.module-3 {
 			background: #ededed;
 			min-height: auto;
@@ -724,9 +820,13 @@
 			}
 		}
 	}
-	#footer .top-footer .block-footer {
-		padding-left: 15px;
-		padding-right: 15px;
+	#footer {
+		.top-footer {
+			.block-footer {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
 	}
 }
 @media screen and (max-width: 767px) {
@@ -756,123 +856,142 @@
 		position: absolute;
 		top: 40px;
 	}
-	#header .navigation {
-		z-index: 999999;
-		padding: 0 15px;
+	#header {
+		.navigation {
+			z-index: 999999;
+			padding: 0 15px;
+			.main-navbar {
+				height: 40px;
+				.list-category {
+					width: 16%;
+					margin: 0;
+					float: left;
+					height: 40px;
+					> li {
+						> a {
+							height: 40px;
+							line-height: 40px;
+							span.icon-bar {
+								height: 40px;
+								line-height: 40px;
+								width: 100%;
+							}
+						}
+					}
+					.dropdown-content {
+						background: rgba(0,0,0,0.9);
+						padding: 20px 0 20px;
+						p.button-all {
+							margin-top: 20px;
+						}
+						h5 {
+							font-size: 18px;
+						}
+						.topic {
+							h5 {
+								margin-left: 55px;
+							}
+							
+						}
+						p {
+							font-size: 14px;
+							margin-bottom: 12px;
+						}
+					}
+				}
+				.form-search {
+					width: 84%;
+					float: left;
+					> div {
+						input {
+							height: 40px;
+						}
+					}
+					button {
+						height: 40px;
+					}
+				}
+			}
+		}
+		.top-menu {
+			.container-special {
+				padding: 25px 15px 0;
+				.phone,.register,.login,.email {
+					padding: 0 0 0 10px;
+				}
+			}
+		}
 	}
-	#header .navigation .main-navbar {
-		height: 40px;
-	}
-	#header .top-menu .container-special {
-		padding: 25px 15px 0;
-	}
-	#header .top-menu .container-special .phone, #header .top-menu .container-special .register,#header .top-menu .container-special .login,#header .top-menu .container-special .email {
-		padding: 0 0 0 10px;
-	}
-	#header .navigation .main-navbar .list-category {
-		width: 16%;
-		margin: 0;
-		float: left;
-	}
-	#header .navigation .main-navbar .form-search {
-		width: 84%;
-		float: left;
-	}
-	#header .navigation .main-navbar .list-category > li > a {
-		height: 40px;
-		line-height: 40px;
-	}
-	#header .navigation .main-navbar .list-category > li > a span.icon-bar {
-		height: 40px;
-		line-height: 40px;
-		width: 100%;
-	}
-	#header .navigation .main-navbar .form-search > div input {
-		height: 40px;
-	}
-	#header .navigation .main-navbar .form-search button {
-		height: 40px;
-	}
-	#header .navigation .main-navbar .list-category {
-		height: 40px;
-	}
-	#header .navigation .main-navbar .list-category .dropdown-content p.button-all {
-		margin-top: 20px;
-	}
-	#header .navigation .main-navbar .list-category .dropdown-content h5 {
-		font-size: 18px;
-	}
-	#header .navigation .main-navbar .list-category .dropdown-content .topic h5 {
-		margin-left: 55px;
-	}
-	#header .navigation .main-navbar .list-category .dropdown-content p {
-		font-size: 14px;
-		margin-bottom: 12px;
-	}
-	#header .navigation .main-navbar .list-category .dropdown-content {
-		background: rgba(0,0,0,0.9);
-	}
-	#header .navigation .main-navbar .list-category .dropdown-content .topic .last-group p {
-		margin-left: 70px;
-	}
-	#header .navigation .main-navbar .list-category .dropdown-content {
-		padding: 20px 0 20px;
-	}
-	#main .module-1 .category a h5 {
-		font-size: 20px ;
-		margin-top: -11px;
-	}
-	#main .module-2 .block-content img {
-		height: auto;
-	}
-	#main .module-2 .show-time a {
-		font-size: 16px;
-	}
-	#main .module-3 .description-module {
-		padding: 0 15px;
-	}
-	#main .module-3 .description-module .carousel-caption h5 {
-		margin: 30px 0 15px;
-	}
-	#main .module-3 .description-module .carousel-caption p {
-		margin-bottom: 50px;
-	}
-	#main .module-4 h3 {
-		font-size: 20px;
-	}
-	#main .module-4 a {
-		font-size: 16px;
-		width: 160px;
-		height: 40px;
-		line-height: 40px;
-	}
-	#main .module-4 {
-		margin: 20px 0 30px;
-	}
-	#main .module-5 {
-		padding-bottom: 20px;
-	}
-	#main .module-5 h5 {
-		margin: 10px 15px;
-		font-size: 16px;
-	}
-	#main .module-5 .form-subscribe {
-		margin: 0;
-		text-align: center;
-	}
-	#main .module-5 .form-subscribe .form-group {
-		float: none; 
-		width: 100%;
-	}
-	#main .module-5 .form-subscribe .form-group input {
-		text-align: center;
-	}
-	#main .module-5 .form-subscribe button {
-		float: none;
-		height: 40px;
-		line-height: 40px;
-		width: 120px;
-		margin-top: 10px
+	
+	#main {
+		.module-1 {
+			.category {
+				a {
+					h5 {
+						font-size: 20px ;
+						margin-top: -11px;
+					}
+				}
+			}
+		}
+		.module-2 {
+			.block-content {
+				img {
+					height: auto;
+				}
+			}
+			.show-time {
+				a {
+					font-size: 16px;
+				}
+			}
+		}
+		.module-3 {
+			.description-module {
+				padding: 0 15px;
+				.carousel-caption {
+					h5 {
+						margin: 30px 0 15px;
+					}
+					p {
+						margin-bottom: 50px;
+					}
+				}
+			}
+		}
+		.module-4 {
+			margin: 20px 0 30px;
+			h3 {
+				font-size: 20px;
+			}
+			a {
+				font-size: 16px;
+				width: 160px;
+				height: 40px;
+				line-height: 40px;
+			}
+		}
+		.module-5 {
+			padding-bottom: 20px;
+			h5 {
+				margin: 10px 15px;
+				font-size: 16px;
+			}
+			.form-subscribe {
+				margin: 0;
+				text-align: center;
+				.form-group {
+					float: none; 
+					width: 100%;
+					input {
+						text-align: center;
+					}
+				}
+				button {
+
+				}
+			}
+		}
 	}
 	#footer .top-footer {
 		text-align: center;
